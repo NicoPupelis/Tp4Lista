@@ -32,23 +32,23 @@ Lista_Super.insert(heroe,'nombre')
 
 Lista_Super.barrido()
   
-#Eliminar linterna verde
+
 Lista_Super.delete('linterna verde','nombre')
 
-#Mostrar aparicion de wolverine
+
 print('   ')
 pos = Lista_Super.search('wolverine', 'nombre')
 if pos:
     print('Anio de de aparicion de wolverine', Lista_Super.get_element_by_index(pos).anio)
 
-#cambiar casa dr strange
+
 print('   ')
 pos = Lista_Super.search('dr strange', 'nombre')
 if pos:
     Lista_Super.get_element_by_index(pos).casa = 'DC'
     print('Dr strange se cambio de casa a DC')
 
-#Cuenta si tiene armadura o traje    
+
 print('   ')
 cont=0
 cont2=0
@@ -61,14 +61,14 @@ for super in lista_aux:
 
 print('los heroes con traje son:',cont,'y con armadura:',cont2)
 
-#mostrar nombre y casa de supers de antes de 1963
+
 print('   ')
 print('Nacidos antes de 1963')
 for super in lista_aux:
     if int(super.anio) < 1963:
         print('Nombre:',super.nombre,'Casa:', super.casa)
 
-#casa capitana marvel y mujer maravilla
+
 print('   ')
 pos = Lista_Super.search('capitana marvel', 'nombre')
 if pos:
@@ -78,7 +78,7 @@ pos2 = Lista_Super.search('mujer maravilla', 'nombre')
 if pos2:
     print('casa de mujer maravilla', Lista_Super.get_element_by_index(pos2).casa)
 
-# bio de star lord y flash
+
 print('   ')
 pos = Lista_Super.search('star lord', 'nombre')
 if pos:
@@ -88,7 +88,7 @@ pos2 = Lista_Super.search('flash', 'nombre')
 if pos2:
     print('Informacion de flash:', Lista_Super.get_element_by_index(pos2).bio)
     
-#Heroes que empizan con B,M y S
+
 ini=['b','m','s']
 
 print('  ')
@@ -97,7 +97,7 @@ for super in lista_aux:
     if super.nombre[0] in ini:
         print(super.nombre)
 
-#contar cuantos hay en cada casa 
+
 print('  ')
 cont=0
 cont2=0
@@ -111,3 +111,4 @@ print('En marvel hay',cont,'superheroes y en DC hay',cont2,'superheroes')
 
 
 Lista_Super.barrido()
+
